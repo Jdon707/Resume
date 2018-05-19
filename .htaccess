@@ -1,0 +1,23 @@
+//Rewrite to www
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^https://jdon707.github.io/Resume[nc]
+RewriteRule ^(.*)$ http://www.https://jdon707.github.io/Resume/$1 [r=301,nc]
+
+//Caching schema
+<FilesMatch "\.(jpg|css|html|css|js|png)$">
+Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
+
+//Change default directory page
+DirectoryIndex https://jdon707.github.io/Resume/index.html
+
+//Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+//Prevent directory listings
+Options All -Indexes
+ 
