@@ -17,7 +17,7 @@ let countDown = new Date('May 24, 2018 00:00:00').getTime(),
       //do something later when date is reached
       //if (distance < 0) {
       //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
+      //  Project is live now;
       //}
 
     }, second)
